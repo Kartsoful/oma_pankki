@@ -25,7 +25,7 @@ router.get('/:idcustomer',function(request,response){
 });
 
 router.post('/', function(request, response){
-    customer.update(request.body, request.params.idcustomer, function(err,result){
+    customer.add(request.body, function(err,result){
         if(err){
             response.send(err);
         }
@@ -41,7 +41,7 @@ router.put('/:idcustomer', function(request,response){
             response.send(err);
         }
         else {
-            console.log(result.affectedRows);
+            console.log(result);
             response.json(result);
         }
     })
