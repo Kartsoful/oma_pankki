@@ -10,7 +10,7 @@ router.get('/', function(request, response){
         else {
             response.json(result);
         }
-    });
+    })
 });
 
 router.get('/:idcustomer',function(request,response){
